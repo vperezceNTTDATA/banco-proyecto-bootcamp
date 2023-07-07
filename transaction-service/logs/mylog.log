@@ -1,0 +1,12 @@
+2023-07-06 15:19:03 [reactor-http-nio-4] INFO  n.g.c.t.c.TransactionController - INI - doDeposit
+2023-07-06 15:19:09 [reactor-http-nio-4] INFO  n.g.c.t.dao.impl.BankAccountDAOImpl - INI - updateBankAccount - DAO
+2023-07-06 15:19:09 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:39}] to localhost:27017
+2023-07-06 15:19:42 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-07-06 15:24:06 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application TRANSACTION-SERVICE with eureka with status DOWN
+2023-07-06 15:24:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1688675046850, current=DOWN, previous=UP]
+2023-07-06 15:24:06 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_TRANSACTION-SERVICE/localhost:transaction-service:8004: registering service...
+2023-07-06 15:24:06 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_TRANSACTION-SERVICE/localhost:transaction-service:8004 - registration status: 204
+2023-07-06 15:24:09 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-07-06 15:24:12 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2023-07-06 15:24:13 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_TRANSACTION-SERVICE/localhost:transaction-service:8004 - deregister  status: 200
+2023-07-06 15:24:13 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "413ff160-23b4-4ead-a3bd-277098de4679",
+		"name": "PROYECTO_BANCO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21804287"
+	},
+	"item": [
+		{
+			"name": "API_REPORTE",
+			"item": [
+				{
+					"name": "GET_COMMISSIONS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/api/reports/995252521/commission",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"api",
+								"reports",
+								"995252521",
+								"commission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_RESUMEN_10_DEBIT_CREDIT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/api/report/10/1111-8888-9999/debit-credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"api",
+								"report",
+								"10",
+								"1111-8888-9999",
+								"debit-credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TRANSACTIONSByACCOUNT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/api/reports/995252521/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"api",
+								"reports",
+								"995252521",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_TRANSACTION",
+			"item": [
+				{
+					"name": "POST_MAKE_DEPOSITO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"monto\": \"150\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/api/transactions/7601713/account/1111-6666-5581/deposit?monto=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"api",
+								"transactions",
+								"7601713",
+								"account",
+								"1111-6666-5581",
+								"deposit"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_MAKE_RETIRO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/transactions/7601713/account/1111-6666-5581/retiro?monto=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"transactions",
+								"7601713",
+								"account",
+								"1111-6666-5581",
+								"retiro"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_PAY_CREDIT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/transactions/7601713/credit/995252529/payment?monto=2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"transactions",
+								"7601713",
+								"credit",
+								"995252529",
+								"payment"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "2000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_PAY_CREDIT_CARD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/transactions/7601713/creditCard/1111-8888-9999/consume?monto=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"transactions",
+								"7601713",
+								"creditCard",
+								"1111-8888-9999",
+								"consume"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_TRANSFER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/transactions/00999595858531/send/00999595858532/receive?monto=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"transactions",
+								"00999595858531",
+								"send",
+								"00999595858532",
+								"receive"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_PRODUCT",
+			"item": [
+				{
+					"name": "createClientDebitCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601717\",\r\n    \"numProducto\": \"995252521\",\r\n    \"numberDebitCard\": \"1111-6666-5581\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/accounts/account/debit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accounts",
+								"account",
+								"debit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601717\",\r\n    \"monto\": \"1000.00\",\r\n    \"numProducto\": \"1111-8888-9992\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/accounts/creditCard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accounts",
+								"creditCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601717\",\r\n    \"monto\": \"1000.00\",\r\n    \"numProducto\": \"995252521\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/accounts/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accounts",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClientAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601713\",\r\n    \"saldo\": \"1000.00\",\r\n    \"numProducto\": \"00999591858535\",\r\n    \"tipoCuenta\": \"CUENTA_CORRIENTE\",\r\n    \"listTitulares\": [\"7601717\", \"555552\"],\r\n    \"firmantesAut\": [\"7601717\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/api/accounts/bankAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"accounts",
+								"bankAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_CLIENT",
+			"item": [
+				{
+					"name": "createClient",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601700\",\r\n    \"nombre\": \"Victor TEST\",\r\n    \"tipoCliente\": \"PERSONAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							],
+							"query": [
+								{
+									"key": "campo1",
+									"value": "2323",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClient VIP",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numDocumento\": \"7601700\",\r\n    \"nombre\": \"Victor TEST\",\r\n    \"tipoCliente\": \"PERSONAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							],
+							"query": [
+								{
+									"key": "campo1",
+									"value": "2323",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_WALLET",
+			"item": []
+		}
+	]
+}
